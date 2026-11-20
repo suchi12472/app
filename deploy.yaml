@@ -3,7 +3,7 @@ kind: Deployment
 metadata: 
   name: nginx-deploy
 spec:
-  replicas: 5
+  replicas: 1
   selector:
     matchLabels:
       app: demo
@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: cont-1
-          image: mysql:8.0
+          image: nginx
           ports:
             - containerPort: 80
